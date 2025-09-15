@@ -1979,6 +1979,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_scorecard_outcomes_async:
           operation:
             $ref: '#/paths/~1api~1v2~1scorecard~1outcomes/post'
@@ -2012,6 +2013,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_scorecard_rule:
           operation:
             $ref: '#/paths/~1api~1v2~1scorecard~1rules/post'
@@ -2045,15 +2047,8 @@ components:
           - $ref: >-
               #/components/x-stackQL-resources/scorecard_rules/methods/update_scorecard_rule
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com

@@ -9334,6 +9334,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_apikey:
           operation:
             $ref: '#/paths/~1api~1v2~1api_keys/post'
@@ -9352,6 +9353,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_apikey:
           operation:
             $ref: '#/paths/~1api~1v2~1api_keys~1{api_key_id}/patch'
@@ -9380,6 +9382,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         delete_application_key:
           operation:
             $ref: '#/paths/~1api~1v2~1application_keys~1{app_key_id}/delete'
@@ -9392,6 +9395,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_application_key:
           operation:
             $ref: '#/paths/~1api~1v2~1application_keys~1{app_key_id}/patch'
@@ -9423,6 +9427,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         search_audit_logs:
           operation:
             $ref: '#/paths/~1api~1v2~1audit~1events~1search/post'
@@ -9448,6 +9453,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_auth_nmapping:
           operation:
             $ref: '#/paths/~1api~1v2~1authn_mappings/post'
@@ -9466,6 +9472,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_auth_nmapping:
           operation:
             $ref: '#/paths/~1api~1v2~1authn_mappings~1{authn_mapping_id}/patch'
@@ -9499,6 +9506,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_current_user_application_key:
           operation:
             $ref: '#/paths/~1api~1v2~1current_user~1application_keys/post'
@@ -9519,6 +9527,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_current_user_application_key:
           operation:
             $ref: >-
@@ -9559,6 +9568,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         cancel_data_deletion_request:
           operation:
             $ref: '#/paths/~1api~1v2~1deletion~1requests~1{id}~1cancel/put'
@@ -9676,6 +9686,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_org_connections:
           operation:
             $ref: '#/paths/~1api~1v2~1org_connections/post'
@@ -9775,6 +9786,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_role:
           operation:
             $ref: '#/paths/~1api~1v2~1roles/post'
@@ -9872,6 +9884,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         add_user_to_role:
           operation:
             $ref: '#/paths/~1api~1v2~1roles~1{role_id}~1users/post'
@@ -9936,6 +9949,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_service_account_application_key:
           operation:
             $ref: >-
@@ -9957,6 +9971,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_service_account_application_key:
           operation:
             $ref: >-
@@ -9991,6 +10006,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_team:
           operation:
             $ref: '#/paths/~1api~1v2~1team/post'
@@ -10044,6 +10060,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         add_member_team:
           operation:
             $ref: '#/paths/~1api~1v2~1team~1{super_team_id}~1member_teams/post'
@@ -10131,6 +10148,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_team_membership:
           operation:
             $ref: '#/paths/~1api~1v2~1team~1{team_id}~1memberships/post'
@@ -10203,6 +10221,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10222,6 +10241,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10241,6 +10261,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10260,6 +10281,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10279,6 +10301,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10298,6 +10321,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10317,6 +10341,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10336,6 +10361,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10355,6 +10381,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10400,6 +10427,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_user:
           operation:
             $ref: '#/paths/~1api~1v2~1users/post'
@@ -10418,6 +10446,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_user:
           operation:
             $ref: '#/paths/~1api~1v2~1users~1{user_id}/patch'
@@ -10445,6 +10474,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10484,6 +10514,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -10493,15 +10524,8 @@ components:
         delete: []
         replace: []
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com

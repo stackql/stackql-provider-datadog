@@ -3681,6 +3681,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_datastore_item:
           operation:
             $ref: '#/paths/~1api~1v2~1actions-datastores~1{datastore_id}~1items/patch'
@@ -3719,6 +3720,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         unregister_app_key:
           operation:
             $ref: >-
@@ -3796,15 +3798,8 @@ components:
               #/components/x-stackQL-resources/connections/methods/delete_action_connection
         replace: []
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com

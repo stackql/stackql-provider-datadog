@@ -2221,6 +2221,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         delete_open_api:
           operation:
             $ref: '#/paths/~1api~1v2~1apicatalog~1api~1{id}/delete'
@@ -2266,6 +2267,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         upsert_catalog_entity:
           operation:
             $ref: '#/paths/~1api~1v2~1catalog~1entity/post'
@@ -2301,6 +2303,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         upsert_catalog_kind:
           operation:
             $ref: '#/paths/~1api~1v2~1catalog~1kind/post'
@@ -2336,6 +2339,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -2345,15 +2349,8 @@ components:
         delete: []
         replace: []
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com

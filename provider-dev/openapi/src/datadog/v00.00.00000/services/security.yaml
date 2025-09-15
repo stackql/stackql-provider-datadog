@@ -961,21 +961,21 @@ paths:
 
 
         Please review the [Pagination section for the "List
-        Vulnerabilities"](#pagination) endpoint.
+        Vulnerabilities"] endpoint.
 
 
         ### Filtering
 
 
         Please review the [Filtering section for the "List
-        Vulnerabilities"](#filtering) endpoint.
+        Vulnerabilities"] endpoint.
 
 
         ### Metadata
 
 
         Please review the [Metadata section for the "List
-        Vulnerabilities"](#metadata) endpoint.
+        Vulnerabilities"] endpoint.
       operationId: ListVulnerableAssets
       parameters:
         - description: >-
@@ -1191,21 +1191,21 @@ paths:
         ### Pagination
 
 
-        Please review the [Pagination section](#pagination) for the "List
+        Please review the [Pagination section] for the "List
         Vulnerabilities" endpoint.
 
 
         ### Filtering
 
 
-        Please review the [Filtering section](#filtering) for the "List
+        Please review the [Filtering section] for the "List
         Vulnerabilities" endpoint.
 
 
         ### Metadata
 
 
-        Please review the [Metadata section](#metadata) for the "List
+        Please review the [Metadata section] for the "List
         Vulnerabilities" endpoint.
       operationId: ListAssetsSBOMs
       parameters:
@@ -11832,6 +11832,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -11914,6 +11915,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -11933,6 +11935,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         mute_findings:
           operation:
             $ref: '#/paths/~1api~1v2~1posture_management~1findings/patch'
@@ -11965,6 +11968,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -12048,6 +12052,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         get_sbom:
           operation:
             $ref: '#/paths/~1api~1v2~1security~1sboms~1{asset_type}/get'
@@ -12129,6 +12134,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -12207,6 +12213,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_security_filter:
           operation:
             $ref: >-
@@ -12228,6 +12235,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_security_filter:
           operation:
             $ref: >-
@@ -12368,6 +12376,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_security_monitoring_rule:
           operation:
             $ref: '#/paths/~1api~1v2~1security_monitoring~1rules/post'
@@ -12472,6 +12481,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         search_security_monitoring_signals:
           operation:
             $ref: '#/paths/~1api~1v2~1security_monitoring~1signals~1search/post'
@@ -12527,6 +12537,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         reorder_scanning_groups:
           operation:
             $ref: '#/paths/~1api~1v2~1sensitive-data-scanner~1config/patch'
@@ -12636,6 +12647,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         search_security_monitoring_histsignals:
           operation:
             $ref: >-
@@ -12665,6 +12677,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -12688,6 +12701,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         run_historical_job:
           operation:
             $ref: '#/paths/~1api~1v2~1siem-historical-detections~1jobs/post'
@@ -12732,15 +12746,8 @@ components:
               #/components/x-stackQL-resources/historical_jobs/methods/delete_historical_job
         replace: []
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com

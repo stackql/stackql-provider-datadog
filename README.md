@@ -124,11 +124,13 @@ npm run generate-provider -- \
   --input-dir provider-dev/source \
   --output-dir provider-dev/openapi/src/datadog \
   --config-path provider-dev/config/all_services.csv \
-  --servers '[{"url": "https://api.{region}", "variables": {"region": {"default": "datadoghq.com","enum": ["datadoghq.com","us3.datadoghq.com","us5.datadoghq.com","ap1.datadoghq.com","ap2.datadoghq.com","datadoghq.eu","ddog-gov.com"]}}}]' \
+  --servers '[{"url": "https://{region:^(?:[^\\:/]+(?:\\:[0-9]+)?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+(?:\\:[0-9]+)?)$}/","variables": {"region": {"default": "datadoghq.com"}}}]' \
   --provider-config '{"auth": { "type": "custom", "location": "header", "name": "DD-API-KEY", "credentialsenvvar": "DD_API_KEY", "successor": { "type": "custom", "location": "header", "name": "DD-APPLICATION-KEY", "credentialsenvvar": "DD_APP_KEY" }}}' \
   --overwrite
 ```
-
+```bash
+sh provider-dev/scripts/fix_broken_links.sh
+```
 ## 5. Test Provider
 
 ### Starting the StackQL Server

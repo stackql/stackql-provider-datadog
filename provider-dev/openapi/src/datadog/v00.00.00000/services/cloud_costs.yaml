@@ -2385,6 +2385,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         upload_custom_costs_file:
           operation:
             $ref: '#/paths/~1api~1v2~1cost~1custom_costs/put'
@@ -2403,6 +2404,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -2470,6 +2472,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -2489,6 +2492,7 @@ components:
           response:
             mediaType: application/json;datetime-format=rfc3339
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -2498,15 +2502,8 @@ components:
         delete: []
         replace: []
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com

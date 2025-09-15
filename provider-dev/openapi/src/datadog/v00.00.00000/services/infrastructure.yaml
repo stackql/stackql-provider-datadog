@@ -3872,6 +3872,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_app:
           operation:
             $ref: '#/paths/~1api~1v2~1app-builder~1apps/post'
@@ -3890,6 +3891,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_app:
           operation:
             $ref: '#/paths/~1api~1v2~1app-builder~1apps~1{app_id}/patch'
@@ -3931,6 +3933,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -3950,6 +3953,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -3969,6 +3973,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         get_device:
           operation:
             $ref: '#/paths/~1api~1v2~1ndm~1devices~1{device_id}/get'
@@ -4083,6 +4088,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: '#/components/x-stackQL-resources/processes/methods/list_processes'
@@ -4111,15 +4117,8 @@ components:
         delete: []
         replace: []
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com

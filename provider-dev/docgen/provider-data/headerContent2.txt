@@ -4,10 +4,10 @@ See also:
 
 ## Installation
 
-To pull the latest version of the `REPLACEME` provider, run the following command:  
+To pull the latest version of the `datadog` provider, run the following command:  
 
 ```bash
-REGISTRY PULL REPLACEME;
+REGISTRY PULL datadog;
 ```
 > To view previous provider versions or to pull a specific provider version, see [here](https://stackql.io/docs/language-spec/registry).  
 
@@ -15,7 +15,8 @@ REGISTRY PULL REPLACEME;
 
 The following system environment variables are used for authentication by default:  
 
-- <CopyableCode code="REPLACEME" /> - REPLACEME API token (see <a href="REPLACEME>How to Create a Personal Access Token</a>)
+- <CopyableCode code="DD_API_KEY" /> - Datadog API key (see <a href="https://docs.datadoghq.com/account_management/api-app-keys/#api-keys">Datadog API Key Documentation</a>)
+- <CopyableCode code="DD_APP_KEY" /> - Datadog Application Key (see <a href="https://docs.datadoghq.com/account_management/api-app-keys/#application-keys">Datadog Application Key Documentation</a>)
   
 These variables are sourced at runtime (from the local machine or as CI variables/secrets).  
 
@@ -27,7 +28,7 @@ To use different environment variables (instead of the defaults), use the `--aut
 
 ```bash
 
-AUTH='{ "REPLACEME": { "type": "bearer",  "credentialsenvvar": "REPLACEME" }}'
+AUTH='{ "datadog": { "type": "custom", "location": "header", "name": "DD-API-KEY", "credentialsenvvar": "YOUR_DD_API_KEY_VAR", "successor": { "type": "custom", "location": "header", "name": "DD-APPLICATION-KEY", "credentialsenvvar": "YOUR_DD_APP_KEY_VAR" }}}'
 stackql shell --auth="${AUTH}"
 
 ```
@@ -35,7 +36,7 @@ or using PowerShell:
 
 ```powershell
 
-$Auth = "{ 'REPLACEME': { 'type': 'bearer',  'credentialsenvvar': 'REPLACEME' }}"
+$Auth = "{ 'datadog': { 'type': 'custom', 'location': 'header', 'name': 'DD-API-KEY', 'credentialsenvvar': 'YOUR_DD_API_KEY_VAR', 'successor': { 'type': 'custom', 'location': 'header', 'name': 'DD-APPLICATION-KEY', 'credentialsenvvar': 'YOUR_DD_APP_KEY_VAR' }}}"
 stackql.exe shell --auth=$Auth
 
 ```

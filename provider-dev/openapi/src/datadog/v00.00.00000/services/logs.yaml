@@ -3432,6 +3432,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         list_logs:
           operation:
             $ref: '#/paths/~1api~1v2~1logs~1events~1search/post'
@@ -3546,6 +3547,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         add_read_role_to_archive:
           operation:
             $ref: >-
@@ -3673,15 +3675,8 @@ components:
               #/components/x-stackQL-resources/metrics/methods/delete_logs_metric
         replace: []
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com

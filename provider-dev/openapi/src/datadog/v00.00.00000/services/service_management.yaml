@@ -14507,6 +14507,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_downtime:
           operation:
             $ref: '#/paths/~1api~1v2~1downtime/post'
@@ -14525,6 +14526,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_downtime:
           operation:
             $ref: '#/paths/~1api~1v2~1downtime~1{downtime_id}/patch'
@@ -14559,6 +14561,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_issue_assignee:
           operation:
             $ref: >-
@@ -14591,6 +14594,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_event:
           operation:
             $ref: '#/paths/~1api~1v2~1events/post'
@@ -14631,6 +14635,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_incident:
           operation:
             $ref: '#/paths/~1api~1v2~1incidents/post'
@@ -14643,6 +14648,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         delete_incident:
           operation:
             $ref: '#/paths/~1api~1v2~1incidents~1{incident_id}/delete'
@@ -14655,6 +14661,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_incident:
           operation:
             $ref: '#/paths/~1api~1v2~1incidents~1{incident_id}/patch'
@@ -14685,6 +14692,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_incident_notification_rule:
           operation:
             $ref: '#/paths/~1api~1v2~1incidents~1config~1notification-rules/post'
@@ -14704,6 +14712,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_incident_notification_rule:
           operation:
             $ref: '#/paths/~1api~1v2~1incidents~1config~1notification-rules~1{id}/put'
@@ -14737,6 +14746,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_incident_notification_template:
           operation:
             $ref: '#/paths/~1api~1v2~1incidents~1config~1notification-templates/post'
@@ -14757,6 +14767,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_incident_notification_template:
           operation:
             $ref: >-
@@ -14847,6 +14858,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_incident_attachments:
           operation:
             $ref: '#/paths/~1api~1v2~1incidents~1{incident_id}~1attachments/patch'
@@ -14875,6 +14887,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_incident_integration:
           operation:
             $ref: >-
@@ -14896,6 +14909,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_incident_integration:
           operation:
             $ref: >-
@@ -14931,6 +14945,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_incident_todo:
           operation:
             $ref: >-
@@ -14952,6 +14967,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_incident_todo:
           operation:
             $ref: >-
@@ -14999,6 +15015,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_on_call_escalation_policy:
           operation:
             $ref: '#/paths/~1api~1v2~1on-call~1escalation-policies~1{policy_id}/put'
@@ -15079,6 +15096,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_on_call_schedule:
           operation:
             $ref: '#/paths/~1api~1v2~1on-call~1schedules~1{schedule_id}/put'
@@ -15110,6 +15128,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -15129,6 +15148,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
       sqlVerbs:
         select:
           - $ref: >-
@@ -15148,6 +15168,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         set_on_call_team_routing_rules:
           operation:
             $ref: '#/paths/~1api~1v2~1on-call~1teams~1{team_id}~1routing-rules/put'
@@ -15175,6 +15196,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_incident_service:
           operation:
             $ref: '#/paths/~1api~1v2~1services/post'
@@ -15193,6 +15215,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_incident_service:
           operation:
             $ref: '#/paths/~1api~1v2~1services~1{service_id}/patch'
@@ -15305,6 +15328,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         create_incident_team:
           operation:
             $ref: '#/paths/~1api~1v2~1teams/post'
@@ -15323,6 +15347,7 @@ components:
           response:
             mediaType: application/json
             openAPIDocKey: '200'
+            objectKey: $.data
         update_incident_team:
           operation:
             $ref: '#/paths/~1api~1v2~1teams~1{team_id}/patch'
@@ -15346,15 +15371,8 @@ components:
               #/components/x-stackQL-resources/incident_teams/methods/delete_incident_team
         replace: []
 servers:
-  - url: https://api.{region}
+  - url: >-
+      https://{region:^(?:[^\:/]+(?:\:[0-9]+)?|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\:[0-9]+)?)$}/
     variables:
       region:
         default: datadoghq.com
-        enum:
-          - datadoghq.com
-          - us3.datadoghq.com
-          - us5.datadoghq.com
-          - ap1.datadoghq.com
-          - ap2.datadoghq.com
-          - datadoghq.eu
-          - ddog-gov.com
