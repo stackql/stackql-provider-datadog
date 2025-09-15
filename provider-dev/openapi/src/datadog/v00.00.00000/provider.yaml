@@ -1,0 +1,159 @@
+id: datadog
+name: datadog
+version: v00.00.00000
+providerServices:
+  actions:
+    id: actions:v00.00.00000
+    name: actions
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/actions.yaml
+    title: actions API
+    version: v00.00.00000
+    description: datadog actions API
+  apm:
+    id: apm:v00.00.00000
+    name: apm
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/apm.yaml
+    title: apm API
+    version: v00.00.00000
+    description: datadog apm API
+  catalog:
+    id: catalog:v00.00.00000
+    name: catalog
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/catalog.yaml
+    title: catalog API
+    version: v00.00.00000
+    description: datadog catalog API
+  cloud_costs:
+    id: cloud_costs:v00.00.00000
+    name: cloud_costs
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/cloud_costs.yaml
+    title: cloud_costs API
+    version: v00.00.00000
+    description: datadog cloud_costs API
+  dashboards:
+    id: dashboards:v00.00.00000
+    name: dashboards
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/dashboards.yaml
+    title: dashboards API
+    version: v00.00.00000
+    description: datadog dashboards API
+  digital_experience:
+    id: digital_experience:v00.00.00000
+    name: digital_experience
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/digital_experience.yaml
+    title: digital_experience API
+    version: v00.00.00000
+    description: datadog digital_experience API
+  infrastructure:
+    id: infrastructure:v00.00.00000
+    name: infrastructure
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/infrastructure.yaml
+    title: infrastructure API
+    version: v00.00.00000
+    description: datadog infrastructure API
+  integrations:
+    id: integrations:v00.00.00000
+    name: integrations
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/integrations.yaml
+    title: integrations API
+    version: v00.00.00000
+    description: datadog integrations API
+  logs:
+    id: logs:v00.00.00000
+    name: logs
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/logs.yaml
+    title: logs API
+    version: v00.00.00000
+    description: datadog logs API
+  metrics:
+    id: metrics:v00.00.00000
+    name: metrics
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/metrics.yaml
+    title: metrics API
+    version: v00.00.00000
+    description: datadog metrics API
+  monitoring:
+    id: monitoring:v00.00.00000
+    name: monitoring
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/monitoring.yaml
+    title: monitoring API
+    version: v00.00.00000
+    description: datadog monitoring API
+  organization:
+    id: organization:v00.00.00000
+    name: organization
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/organization.yaml
+    title: organization API
+    version: v00.00.00000
+    description: datadog organization API
+  remote_config:
+    id: remote_config:v00.00.00000
+    name: remote_config
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/remote_config.yaml
+    title: remote_config API
+    version: v00.00.00000
+    description: datadog remote_config API
+  security:
+    id: security:v00.00.00000
+    name: security
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/security.yaml
+    title: security API
+    version: v00.00.00000
+    description: datadog security API
+  service_management:
+    id: service_management:v00.00.00000
+    name: service_management
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/service_management.yaml
+    title: service_management API
+    version: v00.00.00000
+    description: datadog service_management API
+  software_delivery:
+    id: software_delivery:v00.00.00000
+    name: software_delivery
+    preferred: true
+    service:
+      $ref: datadog/v00.00.00000/services/software_delivery.yaml
+    title: software_delivery API
+    version: v00.00.00000
+    description: datadog software_delivery API
+config:
+  auth:
+    type: custom
+    location: header
+    name: DD-API-KEY
+    credentialsenvvar: DD_API_KEY
+    successor:
+      type: custom
+      location: header
+      name: DD-APPLICATION-KEY
+      credentialsenvvar: DD_APP_KEY
